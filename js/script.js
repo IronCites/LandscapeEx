@@ -7,6 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             nav.classList.toggle('active');
+            // Toggle menu icon between bars and times
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
     }
     
